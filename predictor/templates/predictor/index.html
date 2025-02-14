@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .form-check {
+            margin-bottom: 10px;
+        }
+        .btn-custom {
+            width: 100%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center text-primary">Disease Prediction System</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group mt-3">
+            <label class="form-label">Select Your Symptoms:</label>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Fever" value="1">
+                        <label class="form-check-label">Fever</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Cough" value="1">
+                        <label class="form-check-label">Cough</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Fatigue" value="1">
+                        <label class="form-check-label">Fatigue</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Headache" value="1">
+                        <label class="form-check-label">Headache</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Sore_Throat" value="1">
+                        <label class="form-check-label">Sore Throat</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Runny_Nose" value="1">
+                        <label class="form-check-label">Runny Nose</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Muscle_Aches" value="1">
+                        <label class="form-check-label">Muscle Aches</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Chest_Pain" value="1">
+                        <label class="form-check-label">Chest Pain</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Nausea" value="1">
+                        <label class="form-check-label">Nausea</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Diarrhea" value="1">
+                        <label class="form-check-label">Diarrhea</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Rash" value="1">
+                        <label class="form-check-label">Rash</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Chills" value="1">
+                        <label class="form-check-label">Chills</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Shortness_of_Breath" value="1">
+                        <label class="form-check-label">Shortness of Breath</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Joint_Pain" value="1">
+                        <label class="form-check-label">Joint Pain</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Body_Aches" value="1">
+                        <label class="form-check-label">Body Aches</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Swollen_Lymph_Nodes" value="1">
+                        <label class="form-check-label">Swollen Lymph Nodes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="Vomiting" value="1">
+                        <label class="form-check-label">Vomiting</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-custom mt-4">Predict Disease</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
